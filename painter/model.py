@@ -1,17 +1,21 @@
 import matplotlib.pyplot as plt
 
+ 
 class Point:
+
     def __init__(self, x: float, y: float) -> None:
         self.x: float = x
         self.y: float = y
 
+
 class Circle:
-    def __init__(self, center: Point, radius: float) -> float:
-        self.center: point = point
+
+    def __init__(self, center: Point, radius: float):
+        self.center: Point = center
         self.radius: float = radius
 
     def area(self) -> float:
-        return 3.14*radius**2
+        return 3.14 * self.radius ** 2
 
     def draw(self) -> None:
         circle = plt.Circle((self.center.x, self.center.y), self.radius, color="r")
@@ -20,7 +24,7 @@ class Circle:
         plt.show()
 
     def __str__(self) -> str:
-        Circle with center at (x, y) and radius r
+        return f"Circle with center at ({self.center.x}, {self.center.y}) and radius {self.radius}"
 
 class Triangle: 
     def __init__(self, point_1: Point, point_2: Point, point_3: Point) -> None:
